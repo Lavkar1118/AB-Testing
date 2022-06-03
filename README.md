@@ -2,11 +2,9 @@
 
 ## Project Overview
 
-AB testing, also known as split testing refers to a randamized experimentation process where-in two versions of a user-experience based product (webpage, applications)
-is compared to determine which one performs better against a specific objective.  It is a commonly used technique for enchancing the performance of digital assets and 
-provides data-driven, throughly informed decisions about the new initiative that is being tested. 
+AB testing, also known as split testing refers to a randamized experimentation process where-in two versions of a user-experience based product (webpage, applications) is compared to determine which one performs better against a specific objective.  It is a commonly used technique for enchancing the performance of digital assets and provides data-driven, throughly informed decisions about the new initiative that is being tested. In this project, AB testing was used to evaluate two different experiments by an e-learning company where a new webpage/changes to existing webpage were implemented towards increasing free enrollments and increasing user retention respectively.
 
-#### Dependencies
+#### Libraries
 - tidyverse
 - ggplot2
 
@@ -93,8 +91,9 @@ The conversion rates for the two groups and the overall conversion rate is shown
 ### Hypothesis formulation
 The null and alternate hypotheses can be formulated as follows:
 
-**Null hypothesis: The treatment group conversion rate (new page) and control group conversion rate (old page) are the same and equal to the overall conversion rate. 
-Alternate hypothesis: The treatment group conversion rate (new page) and control group conversion rate (old page) are different**
+**Null hypothesis:** The treatment group conversion rate (new page) and control group conversion rate (old page) are the same and equal to the overall conversion rate.
+
+**Alternate hypothesis:** The treatment group conversion rate (new page) and control group conversion rate (old page) are different
 
 ### Bootstrapping and AB Testing
 A sampling distribution of the difference in conversion rates between the two pages is obtained by bootstrapping over 10,000 iterations. This distribution is shown below. The red dashed lines indicate the two sided observed difference in conversion rates between the two groups. 
@@ -265,10 +264,6 @@ The baseline data provided and the calculation of baseline conversion rates are 
 **Pageviews required is maximum of pageviews for the different metrics. Therefore the required pageviews is 4,741,212**
 
 ### Duration and exposure
-100% diversion of traffic at 40,000 pageviews/day would require 119 days
-On eliminating retention (which has the max pageview requirement currently), the pageview requirement becomes 685,325 and there are two options:
-18 day experiment with 100% diversion
-36 day experiment with 50% diversion
 
 If 100% of the web traffic is diverted to the experiment, based on 40,000 pageviews per day, it would take around 119 days to complete the experiment, which was deemed too long by the company. On eliminating the retention parameter, the maximum pageview requirement now drops to 685,325. This results in an 18-day experiment using a 100% diversion rate and a 36 days experiment using a 50% diversion rate. Since the company is conducting other experiments in parallel, using 50% of the traffic for this experiment is appropriate. Therefore, it was decided that 685,325 pageview samples will be collected over a period of 36 days. 
 
@@ -278,8 +273,8 @@ If 100% of the web traffic is diverted to the experiment, based on 40,000 pagevi
 ### Control and Experiment Data Overview
 The webpage experiment was conducted based on the sizing, duration and exposure requirements previously established. An overview of the results for both the control and experiment group is shown below
 
-| Control | Experiment |
-|:-------------------|:--------------------|
+|Parameter| Control | Experiment |
+|:-------------------|:--------------------|:--------------------|
 |Cookies	|345543|344660|
 |Clicks	|28378	|28325|
 |Enrollments	|3785	|3423|
@@ -302,7 +297,7 @@ A two-sample proportion test was performed to analyze if the evaluation metrics 
 | Parameter | D_min | Control | Experiment | Diff | StdErr | MargErr | CI_lower | CI_upper | Result |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 |Gross Conversion|0.01|0.218875|0.198320|-0.020555|0.004370|0.008565|-0.029120|-0.011989|Statistically and Practically Signficant|
-|Net Conversion|0.0075|0.117562|0.112688|-0.004874|0.003434|0.006731|-0.011604|0.001857|Neither Statistically and Practically Signficant|
+|Net Conversion|0.0075|0.117562|0.112688|-0.004874|0.003434|0.006731|-0.011604|0.001857|Neither Statistically and Practically Significant|
 
 #### **Inference**
 For both the metrics, the 95% confidence interval centered around the difference in conversion between the control and experiment groups was calculated. 

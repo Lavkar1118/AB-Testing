@@ -7,6 +7,7 @@ AB testing, also known as split testing refers to a randomized experimentation p
 #### Libraries
 - tidyverse
 - ggplot2
+- data.table
 
 ## Table of Contents
 - [Part 1 - Testing a New Webpage to Increase Free Trial Enrollment](#part1)
@@ -100,7 +101,7 @@ The treatment group conversion rate (new page) and control group conversion rate
 ### Bootstrapping and AB Testing
 A sampling distribution of the difference in conversion rates between the two pages is obtained by bootstrapping over 10,000 iterations. This distribution is shown below. The red dashed lines indicate the two sided observed difference in conversion rates between the two groups. 
 
-<img src="https://github.com/Lavkar1118/AB-Testing/blob/main/Assets/hist_diff.jpeg" width="400" height="600" />
+<img src="https://github.com/Lavkar1118/AB-Testing/blob/main/Assets/hist_diff.jpeg" width="525" height="550" />
 
 The proportion of samples where the absolute difference was greater than the absolute observed difference is 18.7%, which corresponds to a p-value of 0.187. Further, a two-sample two-sided z-test was performed and this yielded a p-value of 0.187. 
 
@@ -114,7 +115,7 @@ AB testing can also be performed using regression techniques. Since the outcome 
 ### Simple Logistic Regression
 Initially, the regression was performed considering only the response variable - converted. The results of this regression analysis are shown below
 
-<img src="https://github.com/knaaga/AB-Testing/blob/main/assets/simple_logistic_regr_results.JPG" width="340.8" height="256.8" />
+<img src="https://github.com/Lavkar1118/AB-Testing/blob/main/Assets/simple_logistic_regression_results.JPG" width="525" height="550" />
 
 A regression coefficient of -0.015 was obtained, which corresponds to a likelihood of 0.9851. The interpretation here is that the new page is 98.51% as likely to convert users as the old page. In other words, the new page is 1.49% less likely to convert users as the old page
 
@@ -123,7 +124,7 @@ Further, the regression analysis yielded a p-value of 0.1899, which is similar t
 ### Multiple Logistic Regression
 Next, the regression was performed considering the country of residence of users in addition to the response variable. The results of this regression analysis are shown below
 
-<img src="https://github.com/knaaga/AB-Testing/blob/main/assets/multiple_logistic_regr_results.JPG" width="336.8" height="302.4" />
+<img src="https://github.com/Lavkar1118/AB-Testing/blob/main/Assets/multiple_logistic_regression_results.JPG" width="525" height="550" />
 
 The regression coefficients for the US, the UK and Canada correspond to likelihoods of 0.9819, 1.0074, 0.9206. The interpretation here is that the conversion rate of the new page for US and Canada residents is lower than that of the old page by 1.81% and 7.94%. For UK residents, the conversion rate of the new page is 0.0074% higher compared to the old page
 
@@ -146,7 +147,7 @@ At the time of this experiment, Udacity courses currently had two options on the
 
 In the experiment, Udacity tested a change where if the student clicked “start free trial,” they were asked how much time they had available to devote to the course. If the student indicated five or more hours per week, they would be taken through the checkout process as usual. If they indicated fewer than 5 hours per week, a message would appear indicating that Udacity courses usually require a more significant time commitment for successful completion, and suggesting that the student might like to access the course materials for free. At this point, the student would have the option to continue enrolling in the free trial or access the course materials for free instead. This screenshot shows what this experiment looks like.
 
-![test](https://github.com/knaaga/AB-Testing/blob/main/assets/webpage_experiment.png)
+![test](https://github.com/Lavkar1118/AB-Testing/blob/main/Assets/webpage_experiment.png)
 
 ### Experiment Setup
 #### **Null Hypothesis**
@@ -169,7 +170,7 @@ The metrics relevant to this analysis are described below.
 
 The user conversion funnel is shown below
 
-<img src="https://github.com/knaaga/AB-Testing/blob/main/assets/conversion_funnel.JPG" width="586.875" height="375" />
+<img src="https://github.com/Lavkar1118/AB-Testing/blob/main/Assets/conversion_funnel.JPG" width="586.875" height="375" />
 
 The practical signficance boundary (d_min) for each metric is defined as the difference in performance that would have to be observed before it is considered to be a meaningful change for the business is shown below
 

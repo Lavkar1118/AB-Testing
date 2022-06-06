@@ -100,7 +100,7 @@ The treatment group conversion rate (new page) and control group conversion rate
 ### Bootstrapping and AB Testing
 A sampling distribution of the difference in conversion rates between the two pages is obtained by bootstrapping over 10,000 iterations. This distribution is shown below. The red dashed lines indicate the two sided observed difference in conversion rates between the two groups. 
 
-<img src="https://github.com/Lavkar1118/AB-Testing/blob/main/Assets/hist_diff.jpeg" width="500" height="357.14" />
+<img src="https://github.com/Lavkar1118/AB-Testing/blob/main/Assets/hist_diff.jpeg" width="400" height="600" />
 
 The proportion of samples where the absolute difference was greater than the absolute observed difference is 18.7%, which corresponds to a p-value of 0.187. Further, a two-sample two-sided z-test was performed and this yielded a p-value of 0.187. 
 

@@ -288,7 +288,7 @@ Sanity checks were done to ensure that the invariant metrics were evenly distrib
 
 | Parameter | Control | Treatment  | Obs_Diff | CI_lower | CI_upper | P-value| Pass_Sanity |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-|Cookies|345543.0|344660.0| 0.001279|-0.00039030049|0.002948968|0.133253| |True|
+|Cookies|345543.0|344660.0| 0.001279|-0.00039030049|0.002948968|0.133253|True|
 |Clicks|28378.0|28325.0|0.000935|-0.00490303341|0.006772423 | 0.75745|True|
 |CTP (diff)|0.0821258|0.0821824|0.000056628|-0.001352|0.001241| 0.9352212|True|
 

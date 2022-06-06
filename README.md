@@ -284,22 +284,22 @@ The webpage experiment was conducted based on the sizing, duration and exposure 
 
 ### Sanity Checks for Invariant Metrics
 
-Sanity checks were done to ensure that the invariant metrics were evenly distributed across the control and experiment groups. For the count metrics - no.of cookies and no.of clicks, the 95% confidence interval centered around 0.5 was calculated and was found to contain the experimental value. For the click-through probability metric (CTP), the difference between the control and experimental group was considered and the 95% confidence interval centered around this difference was found to contain zero. Therefore, it can be concluded that all metrics pass sanity checks. The implication here is that no.of cookies and no.of clicks are equally distributed between the two groups and the difference in CTP between the two groups is not significant.
+Sanity checks were done to ensure that the invariant metrics were evenly distributed across the control and experiment groups. For both the count metrics - no.of cookies and no.of clicks, and the click-through probability metric (CTP), the difference between the control and experimental group was considered and the 95% confidence interval centered around this difference was found to contain zero. Therefore, it can be concluded that all metrics pass sanity checks. The implication here is that no.of cookies and no.of clicks are equally distributed between the two groups and the difference in CTP between the two groups is not significant.
 
-| Parameter | Control | Experiment | Prob | StdErr | MargErr | CI_lower | CI_upper | Obs_val | Pass_Sanity |
-|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-|Cookies|345543.0|344660.0|0.5|0.000602|0.001180|0.498820|0.501180|0.499360|True|
-|Clicks|28378.0|28325.0|0.5|0.002100|0.004116|0.495884|0.504116|0.499533|True|
-|CTP (diff)|0.0821258|0.0821824|0|0.000661|0.001295|0.484462|-0.001352|0.001239|True|
+| Parameter | Control | Treatment  | Obs_Diff | CI_lower | CI_upper | P-value| Pass_Sanity |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|Cookies|345543.0|344660.0| 0.001279|-0.00039030049|0.002948968|0.133253| |True|
+|Clicks|28378.0|28325.0|0.000935|-0.00490303341|0.006772423 | 0.75745|True|
+|CTP (diff)|0.0821258|0.0821824|0.000056628|-0.001352|0.001241| 0.9352212|True|
 
 ### AB Testing
 #### **Results**
 A two-sample proportion test was performed to analyze if the evaluation metrics - gross conversion and net conversion were different between the control and experiment groups. The results of this analysis are shown below
 
-| Parameter | D_min | Control | Experiment | Diff | StdErr | MargErr | CI_lower | CI_upper | Result |
-|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-|Gross Conversion|0.01|0.218875|0.198320|-0.020555|0.004370|0.008565|-0.029120|-0.011989|Statistically and Practically Significant|
-|Net Conversion|0.0075|0.117562|0.112688|-0.004874|0.003434|0.006731|-0.011604|0.001857|Neither Statistically and Practically Significant|
+| Parameter | D_min | Control | Experiment | Obs_Diff | CI_lower | CI_upper |P-value| Result |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|Gross Conversion|0.01|0.218875|0.198320|-0.020555|-0.029120|-0.011989|0.000002750943 |Statistically and Practically Significant|
+|Net Conversion|0.0075|0.117562|0.112688|-0.004874|-0.011604|0.001857|0.1608122 |Neither Statistically and Practically Significant|
 
 #### **Inference**
 For both the metrics, the 95% confidence interval centered around the difference in conversion between the control and experiment groups was calculated. 

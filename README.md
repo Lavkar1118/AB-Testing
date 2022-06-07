@@ -313,7 +313,7 @@ For the net conversion metric, this confidence interval was found to contain zer
 Based on the analysis of the AB test, it can be concluded that the experiment resulted in a decrease in the gross conversion rate of users. In other words, the ratio of the number of users enrolling in the free trial to the number of users clicking on the free trial has reduced. However, the experiment did not increase net enrollment in a statistically significant manner. Therefore, it can be considered partly successfull. The recommendation is to launch the experiment, while continuing to design additional experiments to achieve the goal of improved net enrollment
 
 ## Acknowledgements <a name="licensing"></a>
-This project was based on Udacity's Data Analyst Nanodegree coursework 
-Social image credits:https://github.com/Lavkar1118/AB-Testing
+* This project was based on Udacity's Data Analyst Nanodegree coursework 
+* Social image credits:https://github.com/Lavkar1118/AB-Testing
 
 

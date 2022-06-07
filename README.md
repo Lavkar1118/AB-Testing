@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-AB testing, also known as split testing refers to a randomized experimentation process where-in two versions of a user-experience based product like a webpage or an application are compared to determine which one performs better against a specific objective.  It is a commonly used technique for enchancing the performance of digital assets and provides data-driven, throughly informed decisions about the new initiative that is being tested. In this project, AB testing was used to evaluate two different experiments by an e-learning company where changes to existing webpage were tested with a goal of increasing free enrollments and increasing user retention.
+AB testing, also known as split testing refers to a randomized experimentation process where-in two versions of a user-experience_based product like a webpage or an application are compared to determine which one performs better against a specific objective.  It is a commonly used technique for enhancing the performance of digital assets and provides data-driven, thoroughly informed decisions about the new initiative that is being tested. In this project, AB testing was used to evaluate two different experiments by an e-learning company where changes to existing webpage were tested with a goal of increasing free enrollments and increasing user retention.
 
 #### Libraries
 - tidyverse

@@ -314,5 +314,6 @@ Based on the analysis of the AB test, it can be concluded that the experiment re
 
 ## Acknowledgements <a name="licensing"></a>
 This project was based on Udacity's Data Analyst Nanodegree coursework 
+Social image credits:https://github.com/Lavkar1118/AB-Testing
 
 
